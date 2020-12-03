@@ -36,6 +36,14 @@ then
 fi
 
 # Download and build PLUMED2
+if [[ -e v${PLUMED_VERSION}.zip ]]; then
+  echo "the v${PLUMED_VERSION}.zip that we want to download already exists, please delete it to be sure that the file is properly downloaded" 
+  exit 0
+fi
+if [[ -e plumed2-${PLUMED_VERSION} ]]; then
+  echo "the plumed2-${PLUMED_VERSION} from unzipping the v${PLUMED_VERSION}.zip already exists, please delete it to be sure that the build is clean"
+  exit 0 
+fi
 wget https://github.com/plumed/plumed2/archive/v${PLUMED_VERSION}.zip
 unzip v${PLUMED_VERSION}.zip
 rm -f  v${PLUMED_VERSION}.zip
