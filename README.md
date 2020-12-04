@@ -10,3 +10,6 @@ Some useful references about Metadynamics and enhanced sampling are:
 - https://doi.org/10.1038/s42254-020-0153-0
 - https://doi.org/10.1007/978-3-319-44677-6_49
 - https://doi.org/10.1007/978-1-4939-9608-7_21 (also https://arxiv.org/abs/1812.08213)
+
+Other usefuls resources
+- [Graph](https://www.desmos.com/calculator/nqujdsvj0z) of a rational switching function
