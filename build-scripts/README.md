@@ -9,7 +9,7 @@
 - Then run `build-lammps.sh` to download and install LAMMPS. This script will patch and link LAMMPS with PLUMED. 
 - The LAMMPS binary will be copied to the same folder as the PLUMED binary.
 - You always need to load the environmental variables using `source source-plumed.sh`, then the PLUMED and LAMMPS binaries are always in the path. 
-- The scripts have been tested on Linux and MacOS (using mpi from homebrew), and should work out of the box for most standard setups. 
+- The scripts have been tested on Linux and MacOS (using mpi from homebrew), and should work out of the box for most standard setups. Also works on Windows with Windows Subsystem for Linux. 
 - Recommended to use default gcc or clang compilers, but options for Intel compilers are included though this hasn't been tested extenstivley. 
 
 
