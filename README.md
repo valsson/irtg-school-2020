@@ -1,6 +1,7 @@
 # TRR 146 IRTG School 2020 - Metadynamics Tutorial
-Includes files related to Metadynamics tutorial in the TRR 146 IRTG School Dec 2020
+Includes links and files related to Metadynamics tutorial in the TRR 146 IRTG School Dec 2020
 
+- **Note, the tutorial is a custom manual of PLUMED 2 and can be found [here](https://ves-code.github.io/doc-v2.7-irtg-school-2020/user-doc/html/ves-irtg-school-mainz-2020-metad.html)**
 - `build-scripts` includes script to download and build PLUMED and LAMMPS
 - `Slides` includes the slides from the tutorial
 - The tutorial can be found [here](https://ves-code.github.io/doc-v2.7-irtg-school-2020/user-doc/html/ves-irtg-school-mainz-2020-metad.html)
