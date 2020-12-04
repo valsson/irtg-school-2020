@@ -3,7 +3,6 @@ set -e
 
 
 # You should run this script in a clean folder 
-# INSTALL_DIR=${PWD}/programs
 INSTALL_DIR=
 BuildMPI=yes
 CompileWithIntel=no
