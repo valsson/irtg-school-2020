@@ -6,7 +6,7 @@ set -e
 INSTALL_DIR=
 BuildMPI=yes
 CompileWithIntel=no
-PLUMED_VERSION=2.6.2
+PLUMED_VERSION=2.7.1
 Make_CPUs=4
 PLUMED_CONFIG_OPT="--enable-modules=all " 
 
