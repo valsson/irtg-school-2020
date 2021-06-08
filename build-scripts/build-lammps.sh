@@ -2,7 +2,7 @@
 set -e
 
 BuildMPI=yes
-LAMMPS_VERSION=3Mar2020
+LAMMPS_VERSION=patch_27May2021
 Make_CPUs=4
 
 
@@ -32,19 +32,19 @@ fi
 
 
 # Download and build LAMMPS 
-if [[ -e stable_${LAMMPS_VERSION}.zip ]]; then
-  echo "the stable_${LAMMPS_VERSION}.zip that we want to download already exists, please delete it to be sure that the file is properly downloaded"
+if [[ -e ${LAMMPS_VERSION}.zip ]]; then
+  echo "the ${LAMMPS_VERSION}.zip that we want to download already exists, please delete it to be sure that the file is properly downloaded"
   exit 0
 fi
-if [[ -e lammps-stable_${LAMMPS_VERSION} ]]; then
-  echo "the lammps-stable_${LAMMPS_VERSION} folder from unzipping the stable_${LAMMPS_VERSION}.zip already exists, please delete it to be sure that the build is clean"
+if [[ -e lammps-${LAMMPS_VERSION} ]]; then
+  echo "the lammps-${LAMMPS_VERSION} folder from unzipping the ${LAMMPS_VERSION}.zip already exists, please delete it to be sure that the build is clean"
   exit 0
 fi
 
-wget https://github.com/lammps/lammps/archive/stable_${LAMMPS_VERSION}.zip
-unzip stable_${LAMMPS_VERSION}.zip 
-rm -f stable_${LAMMPS_VERSION}.zip 
-cd lammps-stable_${LAMMPS_VERSION}
+wget https://github.com/lammps/lammps/archive/${LAMMPS_VERSION}.zip
+unzip ${LAMMPS_VERSION}.zip 
+rm -f ${LAMMPS_VERSION}.zip 
+cd lammps-${LAMMPS_VERSION}
 
 
 if [[ ${BuildMPI} == "no" ]]; then 
