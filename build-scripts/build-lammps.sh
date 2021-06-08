@@ -4,6 +4,8 @@ set -e
 BuildMPI=yes
 LAMMPS_VERSION=patch_27May2021
 Make_CPUs=4
+PLUMED_LinkMode=static
+#static;shared;runtime
 
 
 if [[  -z ${PLUMED_KERNEL} ]]; then
@@ -69,7 +71,7 @@ fi
 cat cmake/CMakeLists.txt | sed "s/ OR PKG_USER-PLUMED//" > cmake/CMakeLists.txt.fix
 mv cmake/CMakeLists.txt.fix cmake/CMakeLists.txt
 
-make -C src lib-plumed args="-p ${INSTALL_DIR} -m runtime"
+make -C src lib-plumed args="-p ${INSTALL_DIR} -m ${PLUMED_LinkMode}"
 
 mkdir build
 cd build
@@ -80,7 +82,7 @@ cmake -DBUILD_MPI=${BuildMPI} \
       -DPKG_RIGID=yes \
       -DPKG_USER-PLUMED=yes \
       -DDOWNLOAD_PLUMED=no \
-      -DPLUMED_MODE=runtime \
+      -DPLUMED_MODE=${PLUMED_LinkMode} \
       $opt \
       ../cmake
 make VERBOSE=1 -j ${Make_CPUs}
